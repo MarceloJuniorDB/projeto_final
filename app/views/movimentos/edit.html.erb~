@@ -1,0 +1,9 @@
+<div id ="conteudo">
+	<h1>Editar Movimentos</h1>
+		<div id ="lista">
+			<%= render 'form' %>
+
+			<%= link_to 'Visualizar', @movimento %> |
+			<%= link_to 'Voltar', movimentos_path %>
+		</div>
+</div>

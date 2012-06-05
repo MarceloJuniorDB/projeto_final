@@ -1,0 +1,15 @@
+<div id = "devise">
+	<h2>Esqueceu sua Senha?</h2>
+		<div id = "lista">
+			<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  		<%= devise_error_messages! %>
+
+		<%= f.label :email %><br />
+		<%= f.email_field :email %>
+
+		<%= f.submit "Envie redefinições da senha" %>
+	<% end %>
+
+	<%= render "links" %>
+	</div>
+</div>

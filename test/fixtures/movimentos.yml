@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  veiculo: MyString
+  placa: MyString
+  hora_entrada: 2012-04-03 19:47:27
+  hora_saida: 2012-04-03 19:47:27
+
+two:
+  veiculo: MyString
+  placa: MyString
+  hora_entrada: 2012-04-03 19:47:27
+  hora_saida: 2012-04-03 19:47:27

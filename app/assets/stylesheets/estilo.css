@@ -1,0 +1,146 @@
+*{
+	list-style:none;
+}
+
+/* configuração do menu*/
+
+#menucontainer {
+	position: relative;
+	height: 30px;
+	color: #FFFFFF;
+	background: #383636;
+	width: 100%;
+	font-family: Heltica, Arial, Verdana, sans-serif;
+	}
+#menunav {
+	position: relative;
+	height: 35px;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: #fff url(background.jpg) repeat-x bottom left;
+	padding: 0 0 0 100px;
+}
+#menunav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 960%;
+	float: left;
+}
+
+#menunav ul li {
+	display: block;
+	float: left;
+	margin: 0 10px;
+}
+
+#menunav ul li a {
+ 	display: block;
+	float: left;
+	color: #EAF3F8;
+	text-decoration: none;
+	padding: 0 0 0 50px;
+	height: 50px;
+	padding: 13px 20px 0 0;
+	height: 20px;
+	float: left;
+}
+
+#menunav ul li a:hover {
+	display: block;
+	width: auto;
+	cursor: pointer;
+	color: #fff;
+	background: transparent url(hover.jpg) repeat-x bottom left;
+}
+
+#menunav ul li a.current, #menunav ul li a.current:hover{
+	color: #fff;
+	background: #1D6893 url(left.jpg) no-repeat top left;
+	line-height: 10px;
+}
+#menunav ul li a.current {
+	display: block;
+	padding: 0 20px 0 0;
+	width: auto;
+	background: #383636 url(right.jpg) no-repeat top right;
+	height: 20px;
+}
+
+/*configuração do conteudo*/
+#conteudo{
+	width: 906px;
+	margin-top: 100px;
+	height: 240px;
+	padding-bottom: 40px;
+
+}
+
+#conteudo p{
+	text-align: center;
+
+}
+
+#conteudo h1{
+	text-align: center;
+	margin-top: -30px;
+
+}
+
+#lista {
+	margin-left: 260px;
+  border: 1px solid black;
+  padding: 15px;
+  width: 450px;
+}
+
+#devise{
+ float: left;
+	margin-left: 260px;
+	border: 1px solid black;
+	width: 450px;
+	padding: 15px;
+}
+
+#cabecalho img{
+	width: 100%;
+}
+
+#mensagem {
+	float: left;
+	width: 400px;
+	height: 50px;
+	margin-left: 250px;
+	margin-top: 150px;
+
+}
+
+.movimentoshow{
+	border: 1px solid black;
+	margin-left: 350px;
+}
+
+.movimentoshow td{
+	border: 1px solid black;
+}
+
+
+#rodape img {
+	width: 100%;
+}
+
+.style1{
+color: #ff0000;
+font-size: x-small;
+}
+
+.inline-errors {
+  display: inline;
+  color: red;
+}
+
+label {
+  width: 60px;
+  float: left
+}

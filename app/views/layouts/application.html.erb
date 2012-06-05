@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Estacionamento</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="tudo">
+		<div id="cabecalho">
+
+				<img src= "/assets/cabecalho.jpg">
+
+		</div>
+                            <div id="menucontainer">
+								<div id="menunav">
+									<% if usuario_signed_in? %>
+										<ul>
+											<li><%= link_to 'Movimento de Veiculo', new_movimento_path %></li>
+											<li><%= link_to 'Relatorio',new_movimento_path %></li>
+											<li><%= link_to 'Cadastro de Veiculo', new_veiculo_path %></li>
+											<li><%= link_to 'Cadastrar Usuário', new_usuario_registration_path %></li>
+											<li><%= link_to 'Sair do Sistema', destroy_usuario_session_path, method: :delete %></li>
+										</ul>
+									<% end %>
+								</div>
+							</div>
+			<div id = "conteudo">
+
+<%= yield %>
+
+			</div>
+		<div id="rodape">
+				<img src= "/assets/rodape.jpg">
+		</div>
+</div>
+
+</body>
+</html>

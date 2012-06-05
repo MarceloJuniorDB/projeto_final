@@ -1,0 +1,3 @@
+class Veiculo < ActiveRecord::Base
+	validates :tipo, presence: true
+end

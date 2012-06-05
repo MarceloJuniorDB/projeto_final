@@ -1,0 +1,24 @@
+<div id ="conteudo">
+  <h1>Lista de Veiculos</h1>
+    <div id="lista">
+      <table>
+          <tr>
+            <th>Tipo</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+
+            <% @veiculos.each do |veiculo| %>
+              <tr>
+                <td><%= veiculo.tipo %></td>
+                <td><%= link_to 'Visualizar', veiculo %></td>
+                <td><%= link_to 'Editar', edit_veiculo_path(veiculo) %></td>
+                <td><%= link_to 'Deletar', veiculo, confirm: 'Deletar?', method: :delete %></td>
+              </tr>
+            <% end %>
+      </table>
+        <br/>
+      <%= link_to 'Cadastrar Novo Veiculo', new_veiculo_path %>
+    </div>
+</div    

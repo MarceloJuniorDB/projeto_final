@@ -1,0 +1,15 @@
+<div id="conteudo">
+	<div id="lista">
+		<p id="notice"><%= notice %></p>
+  		<table>
+          <tr>
+            <td><b>Tipo:</b></td>
+          	<td><%= @veiculo.tipo %></td>
+          </tr>
+
+   			</table>
+   			<br>
+					<%= link_to 'Alterar', edit_veiculo_path(@veiculo) %> |
+					<%= link_to 'Voltar', veiculos_path %>
+		</div>
+</div>

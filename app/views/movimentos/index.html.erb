@@ -1,0 +1,31 @@
+<div id = "conteudo">
+	<h1>Lista de Movimentos</h1>
+	<div id= "lista">
+		<table>
+  <tr>
+    <th>Veiculo</th>
+    <th>Placa</th>
+    <th>Entrada</th>
+    <th>Saida</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @movimentos.each do |movimento| %>
+  <tr>
+    <td><%= movimento.veiculo.tipo %></td>
+    <td><%= movimento.placa %></td>
+    <td><%= movimento.hora_entrada.strftime("%d/%m/%Y %H:%M") %></td>
+    <td><%= movimento.hora_saida.strftime("%d/%m/%Y %H:%M") if movimento.hora_saida %></td>
+    <td><%= link_to 'Saída', sair_movimento_path(movimento), method: :put %></td>
+    <td><%= link_to 'Editar', edit_movimento_path(movimento) %></td>
+    <td><%= link_to 'Deletar', movimento, confirm: 'Voce quer deletar?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br/>
+
+<%= link_to 'Novo Movimento', new_movimento_path %>
+</div>
+</div>

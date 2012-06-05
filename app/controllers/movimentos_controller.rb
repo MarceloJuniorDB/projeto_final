@@ -1,0 +1,91 @@
+class MovimentosController < ApplicationController
+	before_filter :authenticate_usuario!
+
+  # GET /movimentos
+  # GET /movimentos.json
+  def index
+    @movimentos = Movimento.abertos
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @movimentos }
+    end
+  end
+
+  # GET /movimentos/1
+  # GET /movimentos/1.json
+  def show
+    @movimento = Movimento.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @movimento }
+    end
+  end
+
+  # GET /movimentos/new
+  # GET /movimentos/new.json
+  def new
+    @movimento = Movimento.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @movimento }
+    end
+  end
+
+  # GET /movimentos/1/edit
+  def edit
+    @movimento = Movimento.find(params[:id])
+  end
+
+  # POST /movimentos
+  # POST /movimentos.json
+  def create
+    @movimento = Movimento.new(params[:movimento])
+
+    respond_to do |format|
+      if @movimento.save
+        format.html { redirect_to @movimento, notice: 'Movimento was successfully created.' }
+        format.json { render json: @movimento, status: :created, location: @movimento }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @movimento.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /movimentos/1
+  # PUT /movimentos/1.json
+  def update
+    @movimento = Movimento.find(params[:id])
+
+    respond_to do |format|
+      if @movimento.update_attributes(params[:movimento])
+        format.html { redirect_to @movimento, notice: 'Movimento was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @movimento.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /movimentos/1
+  # DELETE /movimentos/1.json
+  def destroy
+    @movimento = Movimento.find(params[:id])
+    @movimento.destroy
+
+    respond_to do |format|
+      format.html { redirect_to movimentos_url }
+      format.json { head :no_content }
+    end
+  end
+
+def sair
+  @movimento = Movimento.find(params[:id])
+  @movimento.sair
+  redirect_to @movimento
+end
+end

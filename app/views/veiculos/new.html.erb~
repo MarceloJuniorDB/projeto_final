@@ -1,0 +1,5 @@
+<h1>Entrada de Veiculo</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Voltar', veiculos_path %>

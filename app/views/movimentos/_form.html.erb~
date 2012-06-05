@@ -1,0 +1,7 @@
+<div id = "formulario">
+<%= semantic_form_for(@movimento) do |f| %>
+  <%= f.input :veiculo, :member_label => :tipo %>
+  <%= f.input :placa %>
+  <%= f.submit %>
+<% end %>
+</div>

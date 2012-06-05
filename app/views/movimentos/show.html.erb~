@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+<div id="conteudo">
+
+<table class="movimentoshow">
+<tr>
+	<td>
+		<b>Veiculo:</b>
+ 		<%= @movimento.veiculo.tipo %>
+	</td>
+</tr>
+
+<tr>
+	<td>
+
+		  <b>Placa:</b>
+		  <%= @movimento.placa %>
+</tr>
+
+<tr>
+	<td>
+
+  <b>Hora entrada:</b>
+  <%= @movimento.hora_entrada %>
+
+</td>
+</tr>
+
+<% if @movimento.fechado? %>
+<tr>
+	<td>
+
+		<b>Hora saida:</b>
+		<%= @movimento.hora_saida %>
+
+	</td>
+</tr>
+<tr>
+	<td>
+
+		<b>Valor:</b>
+		<%= @movimento.valor %>
+
+</tr>
+<% end %>
+	</tr>
+</table>
+<p>
+<%= link_to 'Editar', edit_movimento_path(@movimento) %> |
+<%= link_to 'Voltar', movimentos_path %>
+</p>
+</div>
